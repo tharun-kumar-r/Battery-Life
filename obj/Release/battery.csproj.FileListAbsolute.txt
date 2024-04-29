@@ -1,0 +1,10 @@
+c:\users\tharun kumar r\documents\visual studio 2012\Projects\battery\battery\bin\Release\battery.exe.config
+c:\users\tharun kumar r\documents\visual studio 2012\Projects\battery\battery\bin\Release\battery.exe
+c:\users\tharun kumar r\documents\visual studio 2012\Projects\battery\battery\bin\Release\battery.pdb
+c:\users\tharun kumar r\documents\visual studio 2012\Projects\battery\battery\obj\Release\battery.charged.resources
+c:\users\tharun kumar r\documents\visual studio 2012\Projects\battery\battery\obj\Release\battery.Form1.resources
+c:\users\tharun kumar r\documents\visual studio 2012\Projects\battery\battery\obj\Release\battery.Properties.Resources.resources
+c:\users\tharun kumar r\documents\visual studio 2012\Projects\battery\battery\obj\Release\battery.uncharged.resources
+c:\users\tharun kumar r\documents\visual studio 2012\Projects\battery\battery\obj\Release\battery.csproj.GenerateResource.Cache
+c:\users\tharun kumar r\documents\visual studio 2012\Projects\battery\battery\obj\Release\battery.exe
+c:\users\tharun kumar r\documents\visual studio 2012\Projects\battery\battery\obj\Release\battery.pdb
