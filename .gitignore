@@ -1,0 +1,64 @@
+# Build Results
+bin/
+obj/
+Debug/
+Release/
+*.exe
+*.dll
+*.pdb
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono auto generated files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+$RECYCLE.BIN/
+
+# Recycle Bin used on file shares
+*.lnk
+
+# IDE-specific files
+.vscode/
+.vs/
+.idea/
+
+# Rider-specific files
+.idea/
+*.sln.iml
+
+# Visual Studio Code
+.vscode/
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Visual Studio 2019
+.vs/
+.vscode/
+
+# Uncomment if you have a Resharper file
+# _ReSharper*/
+
+# Avoid versioning NuGet packages
+packages/
+*.nupkg
+.nuget/
+
+# Avoid uploading security-related files
+.env
+*.key
+*.cer
+*.pfx
+*.snk
