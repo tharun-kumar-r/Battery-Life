@@ -16,7 +16,7 @@ Follow these simple steps to set up the Battery Life Application:
 1. **Add the Application to Startup**:
    - Press `Win + R` to open the Run dialog.
    - Type `shell:startup` and press Enter.
-   - Copy and paste the `Battery_Life.exe` file from Application Folder into the startup folder.
+   - Copy and paste the `Battery_Life.exe` file from `Application` Folder into the startup folder.
 
 2. **Set Up Sound Notifications**:
    - Copy the `wav` folder from Wav_files folder containing the sound files.
