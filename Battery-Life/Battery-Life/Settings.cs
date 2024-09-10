@@ -112,14 +112,38 @@ namespace Battery_Life
             trackBar2.Value = Properties.Settings.Default.max;
             minper.Text = Properties.Settings.Default.min + "%";
             maxper.Text = Properties.Settings.Default.max + "%";
+
+            if (Properties.Settings.Default.sound == 0)
+            {
+                checkBox1.Checked = false;
+            }
+            else
+            {
+                checkBox1.Checked = true;
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.min = trackBar1.Value;
             Properties.Settings.Default.max= trackBar2.Value;
+            if (checkBox1.Checked == false)
+            {
+                Properties.Settings.Default.sound = 0;
+            }
+            else
+            {
+                Properties.Settings.Default.sound =1;
+            }
+
             Properties.Settings.Default.Save();
             this.Hide();
+        }
+
+        private void trackBar2_Scroll(object sender, EventArgs e)
+        {
+
         }
     }
 }
