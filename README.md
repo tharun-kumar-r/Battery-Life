@@ -13,16 +13,9 @@ A simple yet useful Windows application that provides voice notifications when y
 
 Follow these simple steps to set up the Battery Life Application:
 
-1. **Add the Application to Startup**:
-   - Press `Win + R` to open the Run dialog.
-   - Type `shell:startup` and press Enter.
-   - Copy and paste the `Battery_Life.exe` file from `Application` Folder into the startup folder.
-
-2. **Set Up Sound Notifications**:
-   - Copy the `wav` folder from Wav_files folder containing the sound files.
-   - Paste the folder into the root of the `C:\` drive (i.e., `C:\wav`).
-
-3. **Restart Your Computer**:
+1. **Clone or Download Output Folder**:
+   - After Clone or download Run **Battery Life Setup.exe** located in Output Folder. Next -> next -> Install -> Finish. 
+2. **Restart Your Computer**:
    - After completing the setup, restart your computer to ensure the application starts automatically and functions properly.
 
 ## How It Works
