@@ -58,5 +58,29 @@ namespace Battery_Life.Properties {
                 this["sound"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Sound\\charged.wav")]
+        public string bfull {
+            get {
+                return ((string)(this["bfull"]));
+            }
+            set {
+                this["bfull"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Sound\\uncharged.wav")]
+        public string blow {
+            get {
+                return ((string)(this["blow"]));
+            }
+            set {
+                this["blow"] = value;
+            }
+        }
     }
 }

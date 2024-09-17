@@ -72,7 +72,7 @@ namespace Battery_Life
                         {
                             if (Properties.Settings.Default.sound == 1)
                             {
-                                SoundPlayer player = new SoundPlayer(@"C:\wav\charged.wav");
+                                SoundPlayer player = new SoundPlayer(Properties.Settings.Default.bfull);
                                 player.Play();
                             }
                                
@@ -80,10 +80,11 @@ namespace Battery_Life
                         catch (Exception ex)
                         {
                             StopTimer();
-                            MessageBox.Show(ex.Message + "\n" + @"C:\wav\charged.wav" + "\n" + @"C:\wav\uncharged.wav", "No Sound Files Found",  MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show(ex.Message, "No Sound Files Found",  MessageBoxButtons.OK, MessageBoxIcon.Error);
                          
                         }
                         StopTimer();
+                        plug.Start();
                     }
                     else if (power == "Offline" && a <= min)
                     {
@@ -96,7 +97,7 @@ namespace Battery_Life
 
                             if (Properties.Settings.Default.sound == 1)
                             {
-                                SoundPlayer player = new SoundPlayer(@"C:\wav\uncharged.wav");
+                                SoundPlayer player = new SoundPlayer(Properties.Settings.Default.blow);
                                 player.Play();
                             }
                            
@@ -104,11 +105,12 @@ namespace Battery_Life
                         catch (Exception ex)
                         {
                             StopTimer();
-                            MessageBox.Show(ex.Message + "\n" + @"C:\wav\charged.wav" + "\n" + @"C:\wav\uncharged.wav", "No Sound Files Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show(ex.Message,"No Sound Files Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
                         }
                         StopTimer();
+                        unplug.Start();
                     }
                 }
                 catch (Exception)
@@ -129,6 +131,9 @@ namespace Battery_Life
             pictureBox1.Image = Properties.Resources.full1;
             StartTimer();
             this.Hide(); // Hide the form on startup
+
+
+
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -144,6 +149,8 @@ namespace Battery_Life
 
         private void button2_Click(object sender, EventArgs e)
         {
+            unplug.Stop();
+            plug.Stop();
             this.Hide();
             Thread.Sleep(1000);
             StartTimer();
@@ -178,6 +185,25 @@ namespace Battery_Life
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void plug_Tick(object sender, EventArgs e)
+        {
+            if(SystemInformation.PowerStatus.PowerLineStatus == PowerLineStatus.Offline)
+            {
+                button2.PerformClick();
+                plug.Stop();
+            }
+            
+        }
+
+        private void unplug_Tick(object sender, EventArgs e)
+        {
+            if (SystemInformation.PowerStatus.PowerLineStatus == PowerLineStatus.Online)
+            {
+                button2.PerformClick();
+                unplug.Stop();
+            }
         }
     }
 }
