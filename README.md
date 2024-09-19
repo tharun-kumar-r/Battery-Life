@@ -34,7 +34,7 @@ All contributions are appreciated, whether it's fixing a bug, improving the code
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE), meaning you can freely use, modify, and distribute the software as long as you include the original copyright and license notice.
+This project is licensed under the [MIT License](https://github.com/tharun-kumar-r/Battery-Life/blob/main/Licence.md), meaning you can freely use, modify, and distribute the software as long as you include the original copyright and license notice.
 
 ---
 
