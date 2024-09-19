@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Battery Life"
-#define MyAppVersion "1.3.0"
+#define MyAppVersion "1.4.0"
 #define MyAppPublisher "Rajsoft Technologies"
 #define MyAppURL "https://www.rajsoft.org.in"
 #define MyAppExeName "Battery Life.exe"

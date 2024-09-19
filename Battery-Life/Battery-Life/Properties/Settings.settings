@@ -12,10 +12,10 @@
       <Value Profile="(Default)">1</Value>
     </Setting>
     <Setting Name="bfull" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Sound\charged.wav</Value>
+      <Value Profile="(Default)">C:\Program Files\Battery Life\Sound\charged.wav</Value>
     </Setting>
     <Setting Name="blow" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Sound\uncharged.wav</Value>
+      <Value Profile="(Default)">C:\Program Files\Battery Life\Sound\uncharged.wav</Value>
     </Setting>
   </Settings>
 </SettingsFile>

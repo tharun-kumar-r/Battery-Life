@@ -149,8 +149,8 @@ namespace Battery_Life
             }
             else
             {
-                Properties.Settings.Default.bfull = @"Sound\charged.wav";
-                Properties.Settings.Default.blow = @"Sound\uncharged.wav";
+                Properties.Settings.Default.bfull = @"C:\Program Files\Battery Life\Sound\charged.wav";
+                Properties.Settings.Default.blow = @"C:\Program Files\Battery Life\Sound\uncharged.wav";
             }
           
             if (checkBox1.Checked == false)
@@ -213,8 +213,8 @@ namespace Battery_Life
                 }
             }
 
-            bfull.Text = @"Sound\charged.wav";
-            blow.Text = @"Sound\uncharged.wav";
+            bfull.Text = @"C:\Program Files\Battery Life\Sound\charged.wav";
+            blow.Text = @"C:\Program Files\Battery Life\Sound\uncharged.wav";
 
         }
 

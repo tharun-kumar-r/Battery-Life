@@ -61,7 +61,7 @@ namespace Battery_Life.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Sound\\charged.wav")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Program Files\\Battery Life\\Sound\\charged.wav")]
         public string bfull {
             get {
                 return ((string)(this["bfull"]));
@@ -73,7 +73,7 @@ namespace Battery_Life.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Sound\\uncharged.wav")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Program Files\\Battery Life\\Sound\\uncharged.wav")]
         public string blow {
             get {
                 return ((string)(this["blow"]));
