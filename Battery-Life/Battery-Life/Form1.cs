@@ -3,6 +3,9 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Threading;
 using System.Media;
+using Microsoft.Win32;
+using System.IO;
+using System.Linq;
 
 namespace Battery_Life
 {
@@ -52,6 +55,8 @@ namespace Battery_Life
            
             this.Invoke((MethodInvoker)delegate
             {
+
+
                 try
                 {
                     string power = SystemInformation.PowerStatus.PowerLineStatus.ToString();
@@ -131,9 +136,12 @@ namespace Battery_Life
             pictureBox1.Image = Properties.Resources.full1;
             StartTimer();
             this.Hide(); // Hide the form on startup
-
-
-
+            if (Properties.Settings.Default.temp == 1)
+            {
+                OptimizePerformance();
+            }
+          
+         
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -204,6 +212,80 @@ namespace Battery_Life
                 button2.PerformClick();
                 unplug.Stop();
             }
+        }
+
+
+        private void OptimizePerformance()
+        {
+            // Clear temporary files
+            string tempPath = Path.GetTempPath();
+            CleanDirectory(tempPath);
+          
+        }
+
+        private void CleanDirectory(string path)
+        {
+            try
+            {
+                var files = Directory.GetFiles(path);
+                foreach (var file in files)
+                {
+                    if (!IsFileLocked(file))
+                    {
+                        try
+                        {
+                            File.Delete(file);
+                        }
+                        catch
+                        {
+                            // Handle exception silently
+                        }
+                    }
+                }
+
+                var directories = Directory.GetDirectories(path);
+                foreach (var dir in directories)
+                {
+                    if (IsDirectoryEmpty(dir))
+                    {
+                        try
+                        {
+                            Directory.Delete(dir, true);
+                        }
+                        catch
+                        {
+                            // Handle exception silently
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                // Handle exception silently
+            }
+        }
+
+        private bool IsFileLocked(string filePath)
+        {
+            try
+            {
+                using (FileStream stream = File.Open(filePath, FileMode.Open, FileAccess.Read, FileShare.None))
+                {
+                    // File is not locked
+                }
+            }
+            catch (IOException)
+            {
+                return true; // File is locked
+            }
+            return false;
+        }
+
+
+
+        private bool IsDirectoryEmpty(string dirPath)
+        {
+            return !Directory.EnumerateFileSystemEntries(dirPath).Any();
         }
     }
 }

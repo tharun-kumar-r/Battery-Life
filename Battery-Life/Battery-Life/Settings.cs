@@ -118,10 +118,22 @@ namespace Battery_Life
             minper.Text = Properties.Settings.Default.min + "%";
             maxper.Text = Properties.Settings.Default.max + "%";
 
+
+            if (Properties.Settings.Default.temp == 0)
+            {
+                tempf.Checked = false;
+            }
+            else
+            {
+                tempf.Checked = true;
+            }
+
+          
+
             blow.Text = Properties.Settings.Default.blow;
             bfull.Text = Properties.Settings.Default.bfull;
 
-            if (Properties.Settings.Default.sound == 0)
+            if (Properties.Settings.Default.sound == 0 )
             {
                 checkBox1.Checked = false;
             }
@@ -160,6 +172,16 @@ namespace Battery_Life
             else
             {
                 Properties.Settings.Default.sound = 1;
+            }
+
+
+            if (tempf.Checked == false)
+            {
+                Properties.Settings.Default.temp = 0;
+            }
+            else
+            {
+                Properties.Settings.Default.temp = 1;
             }
 
             Properties.Settings.Default.Save();

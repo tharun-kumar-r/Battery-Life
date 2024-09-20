@@ -82,5 +82,17 @@ namespace Battery_Life.Properties {
                 this["blow"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int temp {
+            get {
+                return ((int)(this["temp"]));
+            }
+            set {
+                this["temp"] = value;
+            }
+        }
     }
 }

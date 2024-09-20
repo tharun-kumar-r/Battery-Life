@@ -45,6 +45,9 @@
             this.blow = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.bfull = new System.Windows.Forms.TextBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.tempf = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
@@ -52,12 +55,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(3, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -237,6 +242,38 @@
             this.bfull.Size = new System.Drawing.Size(177, 20);
             this.bfull.TabIndex = 0;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.checkBox3);
+            this.tabPage3.Controls.Add(this.tempf);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(271, 177);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Performance";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(21, 43);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(112, 17);
+            this.checkBox3.TabIndex = 17;
+            this.checkBox3.Text = "Clean Ram Cache";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.Visible = false;
+            // 
+            // tempf
+            // 
+            this.tempf.AutoSize = true;
+            this.tempf.Location = new System.Drawing.Point(21, 20);
+            this.tempf.Name = "tempf";
+            this.tempf.Size = new System.Drawing.Size(194, 17);
+            this.tempf.TabIndex = 16;
+            this.tempf.Text = "Clear All Temp Files On App Startup";
+            this.tempf.UseVisualStyleBackColor = true;
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(197, 218);
@@ -284,6 +321,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -309,5 +348,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.CheckBox tempf;
+        private System.Windows.Forms.CheckBox checkBox3;
     }
 }

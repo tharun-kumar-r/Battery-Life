@@ -17,5 +17,8 @@
     <Setting Name="blow" Type="System.String" Scope="User">
       <Value Profile="(Default)">C:\Program Files\Battery Life\Sound\uncharged.wav</Value>
     </Setting>
+    <Setting Name="temp" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
